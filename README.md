@@ -1,6 +1,19 @@
 # Colorectal Cancer Detection Code Explanation
 
-This code is designed to create a model for detecting colorectal cancer using PyTorch. 
+This code is designed to create a model for detecting colorectal cancer using PyTorch as the course project of COMP6321, Fall 2023 semester in Groupe H. The details of the task can be found in the project explanation. Here are some headlines:
+#### - Utilizing CNNs for Real-World Image Classification
+- Apply CNN models to diverse image classification challenges and datasets.
+- Investigate knowledge transfer between different applications using pre-trained models.
+
+#### - Transfer Learning Across Applications
+- Test the adaptability of pre-trained models on diverse datasets.
+- Evaluate the efficacy of transferring learned features between applications.
+
+#### - Optimizing CNNs for Real-World Applications
+- Train, fine-tune, and assess CNN models for specific real-world uses.
+- Conduct comprehensive evaluations to gauge model performance in practical scenarios.
+
+In the following sections, the whole architecture and procedure of the code are explained.
 
 ## Library Import
 The code begins by importing necessary libraries such as `torch`, `numpy`, `torchvision`, `seaborn`, and `sklearn`. These libraries provide functionalities for array operations, deep learning, data visualization, and machine learning respectively.
@@ -48,6 +61,21 @@ The `evaluate_model_on_test_set()` function is defined to load the saved model a
 The model's predictions on the test set are used to calculate the F1 score, precision, and recall using functions from the `sklearn.metrics` module. These metrics provide a quantitative measure of the model's performance.
 
 A confusion matrix is also computed and displayed using `seaborn`'s heatmap function. The confusion matrix provides a visual representation of the model's performance, showing the number of correct and incorrect predictions for each class.
+
+## Hyperparameter Tuning and Model Evaluation
+The final part of the code performs a grid search over a set of hyperparameters to find the best model. 
+
+### Grid Search on Hyperparameters
+The `ParameterGrid` function from the `sklearn.model_selection` module is used to create a grid of hyperparameters for the model. The hyperparameters include learning rate, batch size, loss function, and momentum.
+
+A loop is then used to iterate over all combinations of hyperparameters in the grid. For each combination, a new `ImageClassifier` is created, and new dataloaders are defined with the current batch size. A new optimizer is created with the current learning rate and momentum, and the appropriate loss function is selected.
+
+The model is then trained using these hyperparameters, and the training and validation loss and accuracy are printed. The model is evaluated on the validation set, and if it achieves the highest accuracy seen so far, the model and its hyperparameters are saved.
+
+### Saving the Best Model
+The best model from the grid search (i.e., the one with the highest validation accuracy) is saved to a file using `torch.save()`. The path for the saved model is defined by the `best_model_gs_path` variable.
+
+This concludes the explanation of the provided code. It's a comprehensive script for training a ResNet model on a colorectal cancer dataset, with functionalities for data loading, model training, performance visualization, model evaluation, and hyperparameter tuning. If you have any more questions or need further clarification, feel free to ask!
 
 
 
