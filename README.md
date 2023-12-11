@@ -1,3 +1,10 @@
+Machine Learning course project (COM6321) - Group H - Fall 2023
+
+Colab link: https://colab.research.google.com/drive/1tDQ8W3Jw_oS-FzkoRKiHV30nCpFMtiZg?usp=sharing
+
+to run the code, just simply open the above link and run all cells. All used packages are installed in the Colab environment by default.
+If you want to run the project in your local device, you need to install packages in the first cell of the notebook using Pip or Conda
+
 # Colorectal Cancer Detection Code Explanation
 
 This code is designed to create a model for detecting colorectal cancer using PyTorch as the course project of COMP6321, Fall 2023 semester in Groupe H. The details of the task can be found in the project explanation. Here are some headlines:
@@ -76,6 +83,5 @@ The model is then trained using these hyperparameters, and the training and vali
 The best model from the grid search (i.e., the one with the highest validation accuracy) is saved to a file using `torch.save()`. The path for the saved model is defined by the `best_model_gs_path` variable.
 
 This concludes the explanation of the provided code. It's a comprehensive script for training a ResNet model on a colorectal cancer dataset, with functionalities for data loading, model training, performance visualization, model evaluation, and hyperparameter tuning. If you have any more questions or need further clarification, feel free to ask!
-
 
 
