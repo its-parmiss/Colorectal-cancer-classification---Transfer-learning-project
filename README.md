@@ -1,4 +1,4 @@
-# Machine Learning course project (COM6321) - Group H - Fall 2023
+# Machine Learning course project 
 
 Colab link: https://colab.research.google.com/drive/1tDQ8W3Jw_oS-FzkoRKiHV30nCpFMtiZg?usp=sharing
 
