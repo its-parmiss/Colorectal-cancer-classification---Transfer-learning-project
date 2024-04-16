@@ -1,7 +1,5 @@
 # Machine Learning course project 
 
-Colab link: https://colab.research.google.com/drive/1tDQ8W3Jw_oS-FzkoRKiHV30nCpFMtiZg?usp=sharing
-
 to run the code, just simply open the above link and run all cells. All used packages are installed in the Colab environment by default.
 If you want to run the project in your local device, you need to install packages in the first cell of the notebook using Pip or Conda
 
